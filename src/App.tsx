@@ -1,9 +1,25 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import reactLogo from "./assets/react.svg";
+import { Button } from "antd";
+import { Model } from "react3l-common";
+import { Field } from "react3l-decorators";
 import "./App.scss";
+
+class AppModel extends Model {
+  @Field(String)
+  public name?: string;
+  @Field(Number)
+  public code?: string;
+}
 
 function App() {
   const [count, setCount] = useState(0);
+  const appModel: AppModel = useMemo(() => {
+    const value = AppModel.create();
+    Object.assign(value, { name: "App", code: "3" });
+    return value;
+  }, []);
+
   return (
     <div className="App">
       <div>
@@ -24,8 +40,10 @@ function App() {
         </p>
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        Click on the Vite and React logos to learn more {appModel.name} -{" "}
+        {appModel.code}
       </p>
+      <Button type="primary">Primary Button</Button>
     </div>
   );
 }
