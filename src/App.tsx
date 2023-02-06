@@ -19,6 +19,8 @@ function App() {
     Object.assign(value, { name: "App", code: "3" });
     return value;
   }, []);
+  const baseUrl = import.meta.env.BASE_URL;
+  const viteBaseUrl = process.env.VITE_BASE_URL;
 
   return (
     <div className="App">
@@ -41,7 +43,7 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more {appModel.name} -{" "}
-        {appModel.code}
+        {appModel.code} - {baseUrl} - {viteBaseUrl}
       </p>
       <Button type="primary">Primary Button</Button>
     </div>
