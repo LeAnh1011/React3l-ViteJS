@@ -4,6 +4,7 @@ import './App.scss'
 
 function App() {
   const [count, setCount] = useState(0)
+  let a;
 
   return (
     <div className="App">
