@@ -3,15 +3,7 @@ import reactLogo from "./assets/react.svg";
 import "./App.scss";
 
 function App() {
-  const [count, setCount] = 
-  useState(0);
-  debugger;
-  debugger;
-  let a = 
-  1;
-  let b = 
-  1;
-  
+  const [count, setCount] = useState(0);
   return (
     <div className="App">
       <div>
