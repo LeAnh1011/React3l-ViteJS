@@ -50,5 +50,43 @@
     "src/**/*.+(js|jsx|ts|tsx)": [
       "yarn lint"
     ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:import/recommended",
+      "plugin:jsx-a11y/recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:react-hooks/recommended",
+      "eslint-config-prettier"
+    ],
+    "settings": {
+      "react": {
+        "version": "detect"
+      },
+      "import/resolver": {
+        "node": {
+          "paths": ["src"],
+          "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        }
+      }
+    },
+    "rules": {
+      "no-console": "warn",
+      "no-debugger": "error",
+      "react/jsx-uses-react": "off",
+      "react/react-in-jsx-scope": "off",
+      "react/jsx-no-target-blank": "off"
+    },
+    "overrides": [
+      {
+        "files": ["*.ts", "*.tsx"],
+        "rules": {
+          "no-undef": "off"
+        }
+      }
+    ],
+    "ignorePatterns": ["src/**/*.test.{ts,tsx}"]
   }
 }
