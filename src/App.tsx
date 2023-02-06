@@ -1,9 +1,10 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.scss'
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import './App.scss';
 
 function App() {
   const [count, setCount] = useState(0);
+  debugger
   debugger
   return (
     <div className="App">
