@@ -18,6 +18,7 @@ export default defineConfig((context) => {
       alias: {
         "~bootstrap": resolve(__dirname, "node_modules/bootstrap"),
         "~antd": resolve(__dirname, "node_modules/antd"),
+        assets: resolve(__dirname, "./src/assets/"),
       },
     },
     plugins: [

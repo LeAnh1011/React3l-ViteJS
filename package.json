@@ -31,6 +31,7 @@
     "react-i18next": "^12.1.5",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.8.0",
+    "react3l": "^7.0.0-rc3",
     "react3l-advanced-filters": "^6.1.0-rc.1",
     "react3l-axios-observable": "^6.0.0",
     "react3l-common": "^6.0.0",
